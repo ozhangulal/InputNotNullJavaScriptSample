@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JQuery check if string empty or null</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/easyStyle.css" rel="stylesheet" />
+    <title>jQuery Check if string empty or null</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            $('#btnCheck').click(function () {
+                var txt = $('#txtName');
+
+                if (txt.val() != null && txt.val() != '') {
+
+                    alert('Your entered string is=' + txt.val())
+
+                } else {
+                    alert('Please enter your name and surname !')
+
+                }
+
+            })
+        });
+    </script>
+
+</head>
+<body>
+
+    <form>
+        <div class="form-group" id="firstDivision">
+            <label for="exampleInputName">Name:</label>
+            <input type="text" class="form-control" id="txtName" aria-describedby="NameHelp" placeholder="Enter name and surname">
+            <small id="nameHelp" class="form-text text-muted">We'll never share your name and surname with anyone else.</small>
+            <button type="button" class="btn btn-primary" id="btnCheck">Submit</button>
+        </div>
+        
+    </form>
+
+</body>
+</html>
